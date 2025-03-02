@@ -2,6 +2,7 @@
 import { products } from "../assets/assets";
 import { createContext } from "react";
 
+
 export const ShopContext = createContext();
 
 
