@@ -51,6 +51,17 @@ const ShopContextProvider = (props) => {
     return totalCount;
 }
 
+{/* UPDATE THE QUANTITY OF THE CART - CAN DELETE OR ADD */}
+const updateQuantity = async ( itemId, size, quantity) => { // for this itemId and size and quantity update the quantity in the cart
+
+    let cartData = structuredClone(cartItems); // Create a deep copy of the cart data (create an object)
+
+    cartData[itemId][size] = quantity; 
+    setCartItems(cartData); // save the updated cart data
+}
+
+
+
 {/* Need to be bellow every other component */}
 const value = {
     products,
@@ -63,6 +74,7 @@ const value = {
     cartItems,
     addToCart,
     getCartCount,
+    updateQuantity,
   };
 
 
