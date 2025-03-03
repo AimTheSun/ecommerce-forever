@@ -6,9 +6,9 @@ import RelatedProducts from '../components/RelatedProducts';
 
 const Product = () => {
   const { productId } = useParams();
-  const { products, currency } = useContext(ShopContext);
+  const { products, currency, addToCart } = useContext(ShopContext);
   const [productData, setProductData] = useState(false);
-    const [size, setSize] = useState('');
+  const [size, setSize] = useState('');
   const [image, setImage] = useState("");
 
   // run the function when the component gets loaded

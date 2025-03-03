@@ -8,7 +8,7 @@ import { ShopContext } from "../context/ShopContext";
 const Navbar = () => {
   const [visible, setVisible] = useState(false); // State to show/hide the navbar on small screens
 
-  const {setShowSearch} = useContext(ShopContext);
+  const {setShowSearch, getCartCount} = useContext(ShopContext);
 
   return (
     <div className="flex item-center justify-between py-5 font-medium">
@@ -57,8 +57,7 @@ const Navbar = () => {
         <Link to="/cart" className="relative">
           <img src={assets.cart_icon} className="w-5 min-w-5" alt="" />
           <p className="absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded-full text-[8px]">
-            {" "}
-            3{" "}
+         {getCartCount()}
           </p>
         </Link>
         <img
