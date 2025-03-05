@@ -36,6 +36,8 @@ const loginUser = async (req, res) => {
         console.log(error);
         res.json({ success: false, message: error.message });
     }
+     
+    console.log("API HIT");
     }
 
 // ROUTE FOR USER REGISTRATION
@@ -66,7 +68,7 @@ const loginUser = async (req, res) => {
              email,
              password:hashedPassword
          })
-         
+        
         // SAVING THE USER TO THE DATABASE
         const user = await newUser.save()
 
@@ -84,6 +86,19 @@ const loginUser = async (req, res) => {
 // ROUTE FOR ADMIN LOGIN
 const adminLogin = async (req, res) => {
     // Check if the user is an admin
+    try {
+        const {email, password} = req.body;
+        if (email === process.env.ADMIN_EMAIL && password === process.env.ADMIN_PASSWORD) {
+            const token = jwt.sign(email + password, process.env.JWT_SECRET)
+            res.json({success:true, token})
+        } else {
+            res.json({success: false, message: "Invalid Credentials"})
+        } 
+
+    } catch (error) {
+        console.log(error);
+        res.json({success:false,message:error.message})
+    }
 }
 
 
