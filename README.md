@@ -1,6 +1,9 @@
-# Forever E-commerce
+<!-- Waving Header -->
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=header&text=Forever%20E-commerce&fontSize=30&fontColor=fff" alt="Waving Header"/>
 
-Welcome to **Forever E-commerce**, a full-stack e-commerce platform built with the MERN stack (MongoDB, Express.js, React, Node.js) and deployed on Vercel. This project offers a seamless shopping experience for users and a robust admin panel for managing products and orders. Below, you'll find everything you need to know about the project, from its features to the challenges faced during development.
+<div align="center">
+Welcome to <b>Forever E-commerce</b>, a full-stack e-commerce platform built with the MERN stack (MongoDB, Express.js, React, Node.js) and deployed on Vercel. This project delivers a <b>seamless shopping experience</b> for users and a <b>robust admin panel</b> for managing products and orders. Scroll down to explore its features, tech stack, and the challenges I conquered to bring it to life!
+</div>
 
 ---
 
