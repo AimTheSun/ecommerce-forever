@@ -6,6 +6,7 @@ Welcome to <b>Forever E-commerce</b>, a full-stack e-commerce platform built wit
 </div>
 
 ---
+<!-- Waving Header -->
 
 ## 🌟 Tech Stack
 
